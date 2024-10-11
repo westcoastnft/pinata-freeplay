@@ -1,0 +1,99 @@
+<html>
+  <head>
+    <title>Hit The Pinata - Freeplay</title>
+    <style>
+      body {
+        font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+        margin-top: 10%;
+        margin-bottom: 10%;
+        height: 80%;
+        max-width: 100ch;
+        margin-left: auto;
+        margin-right: auto;}
+      .hidden { display: none; }
+      button { cursor: pointer; }
+      textarea {
+        width: 80%; 
+        height: 10ch;
+      }
+      input {
+        width: 80%; 
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Hit The Pinata - Freeplay</h1>
+
+    <div class="config">
+      <h2>Config</h2>
+      <p>
+        <label>
+          Network<br>
+          <select class="network">
+              <option default value="168587773">Blast - Testnet</option>
+              <option value="81457">Blast - Mainnet</option>
+          </select>
+        </label>
+      </p>
+      <p>
+        <label>
+          Pinata Contract Address<br>
+          <input class="contract" type="text" value="">
+        </label>
+      </p>
+    </div>
+
+    <div class="connection">
+      <h2>Connect MetaMask</h2>
+      <p>
+        <button class="mm" disabled><img width="100px" src="https://docs.metamask.io/img/metamask-logo.svg"></button>
+        <div class="account"></div>
+        <div class="contract"></div>
+      </p>
+    </div>
+
+    <div class="input">
+      <h2>Select Wallets</h2>
+      <p>
+        <label>Paste addresses one per line</label><br>
+        <textarea class="wallets"></textarea>
+      </p>
+    </div>
+
+    <div class="merkle">
+      <h2>Create Merkle Tree</h2>
+      <p>
+        <label>Merkle Tree</label>
+        <button class="merkle" disabled>Create</button>
+        <div class="merkleTreeResult"></div>
+      </p>
+      <p>
+      </p>
+    </div>
+
+    <div class="sign">
+      <h2>Sign Merkle Root</h2>
+      <p>
+        <button class="sign" disabled>Sign</button>
+        <div class="signature"></div>
+      </p>
+    </div>
+
+    <div class="proofs">
+      <h2>Proofs</h2>
+      <p>
+        <label>Distribute Proofs</label><br>
+        <textarea class="proofs"></textarea>
+      </p>
+    </div>
+
+    <script>
+      const $ = {} 
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/5.7.2/ethers.umd.min.js"
+            type="application/javascript">
+    </script>
+    <script src="index.js" type="module">
+    </script>
+  </body>
+</html>
