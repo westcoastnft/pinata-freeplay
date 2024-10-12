@@ -151,12 +151,13 @@ e('.sign .sign', 'click', async (e) => {
     l(signature)
     h('.signature', `<p>Signature: <b>${signature}</b></p>`)
 
+    const root = tree.root
     const proofs = {} 
     for (const [i, v] of tree.entries()) {
       const proof = tree.getProof(i)
       const nonce = v[1].toString()
       const address = v[0]
-      proofs[address] = { nonce, proof }
+      proofs[address] = { nonce, proof, root, signature }
     }
     h('.proofs .proofs', JSON.stringify(proofs, null, 2))
 
