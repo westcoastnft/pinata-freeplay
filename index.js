@@ -102,7 +102,7 @@ e('.mm', 'click', async (e) => {
     h('.connection .contract', `
         <p>Found contract <b>${name}</b> at <b>${address}</b></p>
         <p>Total supply <b>${toEth(supply)} ${symbol}</b></p>
-        <p>Account <b>${account} has FREEPLAY role ${role}</b></p>`)
+        <p>Account <b>${account}</b> has <b>FREEPLAY</b> role <b>${role}</b></p>`)
 
     Array.from(qAll('button')).map(e => e.disabled = false)
   } catch (ex) {
